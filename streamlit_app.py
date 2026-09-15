@@ -59,7 +59,7 @@ if submitted:
     }
 
     try:
-        response = requests.post(API_URL, json=payload, timeout=10)
+        response = requests.post(API_URL, json=payload, timeout=45)
         result = response.json()
 
         if result["churn_prediction"] == "Yes":
