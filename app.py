@@ -54,10 +54,10 @@ class CustomerData(BaseModel):
 
 def preprocess(payload: CustomerData) -> pd.DataFrame:
     """Turn raw input into the exact encoded structure the model expects."""
-    raw = pd.DataFrame([payload.dict()])
+    raw = pd.DataFrame([payload.model_dump()])
 
     # Same one-hot encoding as training
-    encoded = pd.get_dummies(raw, drop_first=True)
+    encoded = pd.get_dummies(raw, drop_first=False)
 
     # Add any columns missing vs. training set (e.g. a category not present
     # in this single row), fill with 0, then force the exact column order.
