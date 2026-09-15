@@ -8,7 +8,7 @@ Run: streamlit run streamlit_app.py
 import streamlit as st
 import requests
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = "http://churn-prediction-app-1tpd.onrender.com/predict"
 
 st.set_page_config(page_title="Churn Predictor", page_icon="📉")
 st.title("📉 Customer Churn Predictor")
@@ -69,3 +69,4 @@ if submitted:
 
     except requests.exceptions.ConnectionError:
         st.error("Could not reach the API. Make sure `uvicorn app:app --port 8000` is running.")
+
