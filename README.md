@@ -118,9 +118,4 @@ uvicorn app:app --reload --port 8000
 streamlit run streamlit_app.py
 ```
 
-## 12. Possible Future Improvements
-- Hyperparameter tuning (GridSearchCV) for higher F1
-- Try XGBoost / LightGBM for potentially better performance
-- Add SHAP values for model explainability (important for client-facing freelance work)
-- Add authentication + rate limiting to the FastAPI service for production use
-- Containerize with Docker for easy deployment
+
